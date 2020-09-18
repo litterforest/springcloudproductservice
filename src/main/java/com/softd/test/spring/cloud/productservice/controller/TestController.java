@@ -1,4 +1,4 @@
-package com.softd.biz.springcloudparentdemo.springcloudproductservice.controller;
+package com.softd.test.spring.cloud.productservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

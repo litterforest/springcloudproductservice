@@ -1,6 +1,5 @@
-package com.softd.biz.springcloudparentdemo.springcloudproductservice;
+package com.softd.test.spring.cloud.productservice;
 
-import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
