@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,6 +25,11 @@ public class ProductController {
 
     @GetMapping("/getProduct/{productId}")
     public String getProduct(@PathVariable("productId") String productId) {
+        return "Product["+ productId +"] Plain Info";
+    }
+
+    @GetMapping("/getProductSingle")
+    public String getProductSingle(@RequestParam("productId") String productId) {
         return "Product["+ productId +"] Plain Info";
     }
 

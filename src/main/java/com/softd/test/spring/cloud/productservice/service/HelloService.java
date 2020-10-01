@@ -18,6 +18,8 @@ import javax.annotation.PreDestroy;
 public class HelloService implements InitializingBean, DisposableBean {
     @Autowired
     private HiService hiService;
+    @Autowired
+    private HiService hiService1;
 
     public HelloService() {
         System.err.println("调用构造函数"+hiService);
@@ -30,20 +32,21 @@ public class HelloService implements InitializingBean, DisposableBean {
         return "hello " + name;
     }
 
-    @PostConstruct
-    void postConstruct() {
-        System.err.println("postConstruct()"+hiService);
-    }
+//    @PostConstruct
+//    void postConstruct() {
+//        System.err.println("postConstruct()"+hiService);
+//    }
 
     @Override
     public void afterPropertiesSet() throws Exception {
         System.err.println("afterPropertiesSet()" + hiService);
+        System.err.println("afterPropertiesSet()1" + hiService1);
     }
 
-    @PreDestroy
-    void preDestroy() {
-        System.err.println("preDestroy()");
-    }
+//    @PreDestroy
+//    void preDestroy() {
+//        System.err.println("preDestroy()");
+//    }
 
     @Override
     public void destroy() throws Exception {
